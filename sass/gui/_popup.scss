@@ -1,0 +1,55 @@
+.popup-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba($color: #000000, $alpha: 0.7);
+}
+.popup-box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  z-index: 1001;
+  @include breakpoint(mobile) {
+    width: 90%;
+  }
+  @include breakpoint(small) {
+    width: 90%;
+  }
+  @include breakpoint(medium) {
+    width: 60%;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--main-color);
+  }
+
+  i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--main-color);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

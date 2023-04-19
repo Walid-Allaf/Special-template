@@ -1,0 +1,16 @@
+.gallary {
+  @include section_padding(50px);
+  h2 {
+    @include section_title;
+  }
+  .images-box {
+    text-align: center;
+    img {
+      width: 200px;
+      padding: 5px;
+      margin: 5px;
+      background: #eee;
+      cursor: pointer;
+    }
+  }
+}

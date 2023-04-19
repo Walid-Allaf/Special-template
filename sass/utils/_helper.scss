@@ -1,0 +1,48 @@
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media screen and (max-width: 575px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media screen and (min-width: 576px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media screen and (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == extraLarge {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+@mixin section_padding($padding) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+@mixin section_title {
+  color: var(--main-color);
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 50px;
+  text-align: center;
+}
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}

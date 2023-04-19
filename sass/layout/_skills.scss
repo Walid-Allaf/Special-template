@@ -1,0 +1,49 @@
+@import "../utils/helper";
+.skills {
+  @include section_padding(50px);
+  background: #eee;
+  h2 {
+    @include section_title;
+  }
+  .skill-box {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    @include breakpoint(mobile) {
+      flex-direction: column;
+    }
+    @include breakpoint(small) {
+      flex-direction: column;
+    }
+    @include breakpoint(medium) {
+      flex-direction: row;
+    }
+  }
+  .skill-name {
+    font-weight: bold;
+    width: 120px;
+    text-align: center;
+    line-height: 30px;
+  }
+  .skill-progress {
+    height: 30px;
+    // width: calc(100% - 110px);
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background-color: var(--main-color);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+/*----------------------------------------------------------------------
+
+	MASTER STYLESHEET
+
+	Project:        Special Project With JS - Responsive HTML and CSS Template.
+	Version:        1.0
+	Author:         Walid Allaf.
+	Primary use:    Business Themes.
+	Email:			walid3llaf053@gmail.com
+
+-----------------------------------------------------------------------*/
+
+// Utils
+// =================================================================
+
+@use "utils/colors" as *; // Colors
+@import "utils/helper"; // Helpers
+
+// Global Rules
+// =================================================================
+
+@import "global-rules/global-rules";
+
+// GUI
+// =================================================================
+
+@import "gui/settings";
+@import "gui/popup";
+
+// Layout
+// =================================================================
+
+@import "layout/header";
+@import "layout/landing";
+@import "layout/about";
+@import "layout/skills";
+@import "layout/gallary";
+@import "layout/timeline";
+@import "layout/features";
+@import "layout/testimonials";
+@import "layout/contact";
+@import "layout/footer";

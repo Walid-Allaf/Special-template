@@ -1,0 +1,48 @@
+.about {
+  @include section_padding(50px);
+
+  display: flex;
+  align-items: center;
+  @include breakpoint(mobile) {
+    flex-direction: column;
+  }
+  @include breakpoint(small) {
+    flex-direction: column;
+  }
+  @include breakpoint(medium) {
+    flex-direction: row;
+  }
+
+  .info {
+    flex: 1;
+    padding: 30px;
+    @include breakpoint(mobile) {
+      text-align: center;
+    }
+    @include breakpoint(small) {
+      text-align: center;
+    }
+    @include breakpoint(medium) {
+      text-align: start;
+    }
+    h2 {
+      @include section_title;
+      @include breakpoint(medium) {
+        text-align: start;
+      }
+      margin: 0 0 20px;
+    }
+    p {
+      line-height: 1.8;
+      color: #777;
+      margin: 0;
+    }
+  }
+  .image-box {
+    flex: 1;
+    text-align: center;
+    img {
+      max-width: 250px;
+    }
+  }
+}

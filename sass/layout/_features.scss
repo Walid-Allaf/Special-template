@@ -1,0 +1,47 @@
+.features {
+  @include section_padding(80px);
+  h2 {
+    @include section_title;
+  }
+  .feat-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .feat {
+      width: 300px;
+      text-align: center;
+      margin-bottom: 40px;
+
+      i {
+        font-size: 40px;
+        color: var(--main-color);
+      }
+
+      h4 {
+        font-size: 22px;
+        margin: 15px 0 40px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 40px;
+          height: 4px;
+          left: 50%;
+          margin-left: -20px;
+          bottom: -22px;
+          background: var(--main-color);
+          border-radius: 4px;
+        }
+      }
+
+      p {
+        width: 80%;
+        margin: 0 auto;
+        color: #777;
+        line-height: 1.6;
+      }
+    }
+  }
+}

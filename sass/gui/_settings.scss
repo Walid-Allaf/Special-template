@@ -1,0 +1,102 @@
+.settings {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 3000;
+  background-color: #fff;
+  box-shadow: 0 0 10px #ddd;
+  transition: 0.3s;
+
+  &.open {
+    left: 0;
+  }
+
+  .icon-holder {
+    position: absolute;
+    right: -30px;
+    top: 330px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 0 10px #ddd;
+
+    i {
+      width: 30px;
+      padding: 8px 0;
+      cursor: pointer;
+    }
+  }
+
+  .settings-container {
+    text-align: center;
+    h2 {
+      padding: 25px;
+      border-bottom: 1px solid #aaa;
+      color: #333;
+    }
+
+    .box {
+      padding: 15px 0;
+      &:nth-child(2n) {
+        background: #eee;
+      }
+      h4 {
+        margin: 0 0 15px 0;
+        color: #777;
+      }
+      .colors-list {
+        padding: 0 15px;
+        li {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          display: inline-block;
+          cursor: pointer;
+          opacity: 0.5;
+
+          &.active {
+            opacity: 1;
+          }
+
+          &:first-child {
+            background-color: $orange_color;
+          }
+          &:nth-child(2) {
+            background-color: $red_color;
+          }
+          &:nth-child(3) {
+            background-color: $green_color;
+          }
+          &:nth-child(4) {
+            background-color: $blue_color;
+          }
+          &:nth-child(5) {
+            background-color: $purple_color;
+          }
+        }
+      }
+
+      .background-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        li {
+          background: $green_color;
+          color: #fff;
+          font-size: 14px;
+          font-weight: bold;
+          padding: 5px 15px;
+          border-radius: 4px;
+          opacity: 0.5;
+          cursor: pointer;
+
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

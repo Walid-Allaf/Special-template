@@ -1,0 +1,95 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  transition: 0.3s;
+
+  .logo {
+    width: 200px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: default;
+  }
+
+  i {
+    font-size: 22px;
+    padding: 10px;
+    cursor: pointer;
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
+
+  ul {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+    @include breakpoint(small) {
+      display: none;
+    }
+    @include breakpoint(large) {
+      display: flex;
+    }
+
+    li {
+      padding: 10px 20px;
+      cursor: pointer;
+
+      a {
+        color: #fff;
+        transition: 0.3s;
+
+        &:hover {
+          color: var(--main-color);
+        }
+      }
+    }
+
+    &.open {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      top: 80px;
+      border-radius: 4px;
+      text-align: left;
+      z-index: 2;
+
+      &::after {
+        content: "";
+        position: absolute;
+        border: 10px solid;
+        border-color: transparent transparent #fff transparent;
+        top: -20px;
+        right: 39px;
+      }
+      li {
+        display: block;
+        a {
+          color: var(--main-color);
+          font-weight: bold;
+
+          &:hover {
+            color: var(--main-color);
+          }
+        }
+      }
+    }
+  }
+}
